@@ -1,46 +1,12 @@
-
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+File Storage Service
 
 
-Welcome to your Python project on Cloud9 IDE!
+A client can create a directory with the name of his choice. When the directory is successfully stored he gets a unique directory id for the stored directory. A client can also store a file with a name of his choice in directory of his choice. When the file is successfully stored he gets a unique file id for the stored file3. A client can also remove any of his stored files by providing the name or id of the file and the name or id of the directory.
 
-To show what Cloud9 can do, we added a basic sample web application to this
-workspace, from the excellent Python tutorial _Learning Python the Hard Way_.
-We skipped ahead straight to example 50 which teaches how to build a web
-application.
+If a client attempts to store a file with a name with which a file already exists in the directory, the the previous file gets overridden. A client is also able to retrieve any of his stored files from a directory by providing the name or id of the file and the directory.
 
-If you've never looked at the tutorial or are interested in learning Python,
-go check it out. It's a great hands-on way for learning all about programming
-in Python.
+A client can also retrieve the list of names of his stored files in a directory. A client can also retrieve list of names of his stored directories.
 
-* _Learning Python The Hard Way_, online version and videos: 
-http://learnpythonthehardway.org/book/
+Each client has a storage quota of 1GB, which means the total size of his stored files cannot exceed 1 GB.
 
-* Full book: http://learnpythonthehardway.org
-
-## Starting from the Terminal
-
-To try the example application, type the following in the terminal:
-
-```
-cd ex50
-python bin/app.py
-```
-
-Alternatively, open the file in ex50/bin and click the green Run
-button!
-
-## Configuration
-
-You can configure your Python version and `PYTHONPATH` used in
-Cloud9 > Preferences > Project Settings > Language Support.
-
-## Support & Documentation
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE.
-To watch some training videos, visit http://www.youtube.com/user/c9ide.
+Each client has a bandwidth quota of 10 GB, which means the total data transfer he does while storing files cannot exceed 10 GB. So if a client stores 1 GB of data and then removes it and again stores 1 GB of data, he has used 2 GB of bandwidth.
